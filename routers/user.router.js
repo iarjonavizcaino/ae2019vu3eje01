@@ -10,6 +10,9 @@ module.exports = (wagner) => {
 
     router.get('/', (req, res) =>
         userCtrl.findAll(req, res));
+
+    router.get('/login/:email/:password', (req, res) =>
+        userCtrl.login(req, res));
     
     router.delete('/:id', (req, res) =>
         userCtrl.deleteByID(req, res));
